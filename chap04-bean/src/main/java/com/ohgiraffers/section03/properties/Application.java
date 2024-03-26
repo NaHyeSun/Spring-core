@@ -1,9 +1,10 @@
-package com.ohgiraffers.section02.initdestroy.subsection02.annotation;
+package com.ohgiraffers.section03.properties;
 
 import com.ohgiraffers.common.Beverage;
 import com.ohgiraffers.common.Bread;
 import com.ohgiraffers.common.Product;
 import com.ohgiraffers.common.ShoppingCart;
+import com.ohgiraffers.section02.initdestroy.subsection02.annotation.ContextConfiguration;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 

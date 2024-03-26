@@ -1,13 +1,14 @@
-package com.ohgiraffers.section02.initdestroy.subsection01.java;
+package com.ohgiraffers.section02.initdestroy.subsection02.annotation;
 
 import com.ohgiraffers.common.Beverage;
 import com.ohgiraffers.common.Bread;
 import com.ohgiraffers.common.Product;
 import com.ohgiraffers.common.ShoppingCart;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Scope;
-
+@ComponentScan("com.ohgiraffers.section02.initdestroy.subsection02.annotation")
 @Configuration
 public class ContextConfiguration {
 
@@ -30,11 +31,6 @@ public class ContextConfiguration {
         return new ShoppingCart();
     }
 
-    @Bean(initMethod = "openShop", destroyMethod = "closeShop")
-    public Owner owner (){
-        return new Owner();
-
-    }
         /* XML 파일에서 <bean> 태그를 이용할 경우
         *  <bean id = "cart" class = "com.ohgiraffers.section01.xmlconfig.ShoppingCart" scope = "prototype"/>
         * */

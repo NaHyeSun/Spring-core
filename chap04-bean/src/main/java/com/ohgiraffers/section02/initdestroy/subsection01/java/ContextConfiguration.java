@@ -1,4 +1,4 @@
-package com.ohgiraffers.section01.scope.subsection02.prototype;
+package com.ohgiraffers.section02.initdestroy.subsection01.java;
 
 import com.ohgiraffers.common.Beverage;
 import com.ohgiraffers.common.Bread;
@@ -28,9 +28,14 @@ public class ContextConfiguration {
     public ShoppingCart cart(){
 
         return new ShoppingCart();
+    }
 
+    @Bean(initMethod = "openShop", destroyMethod = "closeShop")
+    public Owner owner (){
+        return new Owner();
+
+    }
         /* XML 파일에서 <bean> 태그를 이용할 경우
         *  <bean id = "cart" class = "com.ohgiraffers.section01.xmlconfig.ShoppingCart" scope = "prototype"/>
         * */
-    }
 }
