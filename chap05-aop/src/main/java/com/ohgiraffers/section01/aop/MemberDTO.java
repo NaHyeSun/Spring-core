@@ -1,10 +1,12 @@
 package com.ohgiraffers.section01.aop;
 
 public class MemberDTO {
+
     private Long id;
+
     private String name;
 
-    public MemberDTO(){}
+    public MemberDTO() {}
 
     public MemberDTO(Long id, String name) {
         this.id = id;
